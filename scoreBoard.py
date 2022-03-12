@@ -3,6 +3,7 @@ from turtle import Turtle
 class ScoreBoard(Turtle):
   def __init__(self):
     super().__init__()
+    self.game_is_on = True
     self.score = 0
     self.x = -300
     self.y = 270
@@ -23,6 +24,7 @@ class ScoreBoard(Turtle):
     self.update_score()
   
   def game_over(self):
+    self.game_is_on = False
     self.clear()
     self.x = -250
     self.y = -20
